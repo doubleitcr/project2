@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>АО "Баян Сулу" - Шоколад и Конфеты</title>
+  <style>
+    /* Подключение строгого минималистичного шрифта (например, Inter) */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: #d2691e;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #d2691e;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .catalog-item {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 1rem;
+      margin: 1rem 0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .catalog-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .catalog-item h3 {
+      margin-top: 0;
+      color: #d2691e;
+    }
+
+    .banner {
+      background: #d2691e;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      border-radius: 12px;
+      margin-top: 4rem;
+      animation: fadeInUp 0.8s forwards;
+    }
+
+    .contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-link:hover {
+      color: #d2691e;
+    }
+
+    .contact-link svg {
+      margin-right: 0.5rem;
+      width: 20px;
+      height: 20px;
+    }
+
+    footer {
+      background: #222;
+      color: #eee;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 4rem;
+    }
+
+    /* Дополнительные эффекты при скролле */
+    .scroll-effect {
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .hidden {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>АО "Баян Сулу"</h1>
+    <nav>
+      <a href="#about">О компании</a>
+      <a href="#catalog">Каталог</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>О компании</h2>
+    <p>АО "Баян Сулу" — ведущий казахстанский производитель шоколада, конфет и других сладостей. Наша фабрика основана в 1974 году и уже более 50 лет радует покупателей качественными и вкусными продуктами.</p>
+    <p>Мы предлагаем широкий ассортимент шоколада, карамели, ириса и печенья, который соответствует международным стандартам качества и изготавливается из лучших ингредиентов.</p>
+  </section>
+
+  <section id="catalog">
+    <h2>Каталог</h2>
+    <div class="catalog-item">
+      <h3><a href="https://bayansulu.kz/ru/catalog/shokolad/" target="_blank">Шоколад</a></h3>
+      <p>Разнообразные сорта молочного и тёмного шоколада — от классических плиток до фигурных изделий.</p>
+    </div>
+    <div class="catalog-item">
+      <h3><a href="https://bayansulu.kz/ru/catalog/karamel/" target="_blank">Карамель</a></h3>
+      <p>Ароматная карамель с разными начинками и вкусами — идеальное лакомство для всей семьи.</p>
+    </div>
+    <div class="catalog-item">
+      <h3><a href="https://bayansulu.kz/ru/catalog/iris/" target="_blank">Ирис</a></h3>
+      <p>Классический и сливочный ирис с нежной текстурой и насыщенным вкусом.</p>
+    </div>
+    <div class="catalog-item">
+      <h3><a href="https://bayansulu.kz/ru/catalog/pechene/" target="_blank">Печенье</a></h3>
+      <p>Ассортимент вкусного и свежего печенья для любого случая.</p>
+    </div>
+  </section>
+
+  <section id="contacts">
+    <h2>Контакты</h2>
+    <div class="contacts">
+      <a href="tel:+77162323456" class="contact-link">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.464 15.464 0 006.59 6.59l2.2-2.2a1 1 0 011.1-.21c1.12.45 2.33.69 3.59.69a1 1 0 011 1v3.5a1 1 0 01-1 1C9.6 22 2 14.4 2 5.5a1 1 0 011-1H6.5a1 1 0 011 1c0 1.26.24 2.47.69 3.59a1 1 0 01-.21 1.1l-2.2 2.2z"/></svg>
+        +7 (7162) 32-34-56
+      </a>
+      <a href="mailto:info@bayansulu.kz" class="contact-link">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18a2 2 0 002 2h16c1.1 0 2-.9 2-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        info@bayansulu.kz
+      </a>
+      <a href="https://bayansulu.kz/ru/" class="contact-link" target="_blank">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M10.9 2H4v20h16V7.1L10.9 2zm1.1 7V3.5L18.5 9H12zm2 11H6v-2h8v2zm4-4H6v-2h12v2zm0-4H6v-2h12v2z"/></svg>
+        Сайт компании
+      </a>
+    </div>
+
+    <div class="banner">
+      <h3>АО "Баян Сулу" — всегда рядом с вами!</h3>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 АО "Баян Сулу". Все права защищены.
+  </footer>
+
+  <script>
+    // Анимация появления при скролле
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    document.querySelectorAll('section').forEach(section => {
+      section.classList.add('scroll-effect', 'hidden');
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
